@@ -34,9 +34,9 @@ class _AvatarAnimationState extends State<AvatarAnimation>
     for (var row = 0; row < rows; row++) {
       for (var column = 0; column < columns; column++) {
         final peep = generator.generate(
-            // facialHair: FacialHair.atoms.first,
-            // accessory: Accessories.atoms.first,
-            );
+          facialHair: FacialHair.atoms.first,
+          accessory: Accessories.atoms.first,
+        );
 
         peepAvatars[row].add(
           PeepAvatar.fromPeep(
