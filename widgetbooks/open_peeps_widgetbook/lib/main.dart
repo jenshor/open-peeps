@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:open_peeps/open_peeps.dart';
-import 'package:open_peeps_widgetbook/avatar_animation.dart';
 import 'package:open_peeps_widgetbook/peep_usecase_generator.dart';
+import 'package:open_peeps_widgetbook/showcase/avatar_animation.dart';
+import 'package:open_peeps_widgetbook/showcase/avatar_grid.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 const double defaultSize = 256;
@@ -116,12 +117,18 @@ class WidgetbookHotReload extends StatelessWidget {
           name: 'Showcase',
           widgets: [
             WidgetbookComponent(
-              name: 'Animation',
+              name: '$PeepAvatar',
               useCases: [
                 WidgetbookUseCase(
-                  name: 'Test',
+                  name: '$AvatarAnimation',
                   builder: (context) {
                     return const AvatarAnimation();
+                  },
+                ),
+                WidgetbookUseCase(
+                  name: '$AvatarGrid',
+                  builder: (context) {
+                    return const AvatarGrid();
                   },
                 ),
               ],
