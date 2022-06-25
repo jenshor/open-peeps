@@ -43,6 +43,10 @@ The `open_peeps` package provides the following Widgets:
 
 ### `PeepAvatar`
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/JensHor/open_peeps/main/docs/assets/PeepAvatar.jpg" height="300" alt="PeepAvatar" />
+</p>
+
 The `PeepAvatar` represents a `Peep` similar to what is known from a `CircleAvatar`.
 A `PeepAvatar` can be used based on the `Peep` model or multiple `PeepAtom`s by using the following constructors:
 
