@@ -1,0 +1,42 @@
+name: open_peeps
+repository: https://github.com/JensHor/open_peeps
+
+packages:
+  - packages/**
+  - widgetbooks/**
+
+command:
+  version:
+    linkToCommits: true
+    branch: main
+  bootstrap:
+    usePubspecOverrides: true
+
+scripts:
+  generate:flutter:
+    run: melos exec -c 1 --depends-on="build_runner" --flutter -- "flutter pub run build_runner build --delete-conflicting-outputs"
+    description: Build all generated files for Flutter packages in this project.
+
+  test:
+    run: |
+      melos exec -c 1 --fail-fast -- "flutter test --coverage"
+      melos exec -c 1 -- "genhtml coverage/lcov.info -o coverage/html"
+    description: Test all packages
+    select-package:
+      dir-exists:
+        - test
+
+  test:open-coverage:
+    run: |
+      melos run test
+      melos exec -c 1 -- "open coverage/html/index.html"
+    description: Test all packages and open the coverage report
+    select-package:
+      dir-exists:
+        - coverage
+
+  pana:
+    run: melos exec -c 10 -- "../../tool/verify_pub_score.sh"
+    select-package:
+      no-private: true
+    description: Checks if the package meets the pub.dev score requirement.

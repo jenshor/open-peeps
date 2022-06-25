@@ -1,0 +1,46 @@
+name: open_peeps_models
+
+on:
+  pull_request:
+    paths:
+      - "packages/open_peeps_models/**"
+      - ".github/workflows/open_peeps_models.yaml"
+
+jobs:
+  build:
+    defaults:
+      run:
+        working-directory: packages/open_peeps_models
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: dart-lang/setup-dart@v1
+
+      - name: Install Dependencies
+        run: dart pub get
+
+      - name: Format
+        run: dart format --set-exit-if-changed .
+
+      - name: Analyze
+        run: dart analyze --fatal-infos --fatal-warnings .
+
+  pana:
+    defaults:
+      run:
+        working-directory: packages/open_peeps_models
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: subosito/flutter-action@v1.5.3
+
+      - name: Install Dependencies
+        run: |
+          flutter packages get
+          flutter pub global activate pana
+      - name: Verify Pub Score
+        run: ../../tool/verify_pub_score.sh

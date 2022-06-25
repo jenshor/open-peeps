@@ -1,0 +1,61 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "open_peeps",
+            "cwd": "packages/open_peeps",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "open_peeps (profile mode)",
+            "cwd": "packages/open_peeps",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "open_peeps (release mode)",
+            "cwd": "packages/open_peeps",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "open_peeps_generator",
+            "cwd": "packages/open_peeps_generator",
+            "request": "launch",
+            "type": "dart",
+            "program": "bin/open_peeps_generator.dart"
+        },
+        {
+            "name": "open_peeps_models",
+            "cwd": "packages/open_peeps_models",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "open_peeps_widgetbook",
+            "cwd": "widgetbooks/open_peeps_widgetbook",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "open_peeps_widgetbook (profile mode)",
+            "cwd": "widgetbooks/open_peeps_widgetbook",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "open_peeps_widgetbook (release mode)",
+            "cwd": "widgetbooks/open_peeps_widgetbook",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

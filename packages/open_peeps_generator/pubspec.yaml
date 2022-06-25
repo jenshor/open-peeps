@@ -1,0 +1,19 @@
+name: open_peeps_generator
+description: A sample command-line application.
+repository: https://github.com/JensHor/open_peeps
+homepage: https://github.com/JensHor/open_peeps
+issue_tracker: https://github.com/JensHor/open_peeps/issues
+documentation: https://github.com/JensHor/open_peeps
+publish_to: 'none'
+
+environment:
+  sdk: '>=2.17.1 <3.0.0'
+
+dev_dependencies:
+  test: ^1.16.0
+  very_good_analysis: ^3.0.0
+dependencies: 
+  code_builder: ^4.1.0
+  dart_style: ^2.2.3
+  file: ^6.1.2
+  open_peeps_models: ^1.0.0
