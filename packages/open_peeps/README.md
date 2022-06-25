@@ -1,5 +1,9 @@
 # Open Peeps 🧞‍♀️
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/JensHor/open_peeps/main/docs/assets/OpenPeeps.jpg" height="300" alt="PeepAvatar" />
+</p>
+
 ## Features
 
 - 💙 **Made for Flutter.** Easy to use.
