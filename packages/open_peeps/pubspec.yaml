@@ -1,6 +1,6 @@
 name: open_peeps
 description: A user-avatar package based on the open peeps illustration library. 
-version: 1.0.0-beta.3
+version: 1.0.0
 homepage: https://github.com/JensHor/open_peeps/tree/main/packages/open_peeps
 repository: https://github.com/JensHor/open_peeps/tree/main/packages/open_peeps
 issue_tracker: https://github.com/JensHor/open_peeps/issues
@@ -14,7 +14,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^1.1.0
-  open_peeps_models: ^1.0.0-beta.1
+  open_peeps_models: ^1.0.0
 
 dev_dependencies:
   flutter_test:
